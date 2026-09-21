@@ -1,0 +1,119 @@
+<svg viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0b0f17" />
+      <stop offset="100%" stopColor="#030712" />
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#f59e0b" />
+      <stop offset="100%" stopColor="#d97706" />
+    </linearGradient>
+    <linearGradient id="mapGrid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
+      <stop offset="100%" stopColor="#10b981" stopOpacity="0.15" />
+    </linearGradient>
+  </defs>
+
+  {/* Background Frame */}
+  <rect width="800" height="480" rx="16" fill="url(#dcBg)" />
+  
+  {/* Top App Header */}
+  <rect width="800" height="48" fill="#111827" stroke="#1f2937" strokeWidth="1" />
+  <circle cx="28" cy="24" r="6" fill="#ef4444" />
+  <circle cx="48" cy="24" r="6" fill="#eab308" />
+  <circle cx="68" cy="24" r="6" fill="#22c55e" />
+  <rect x="100" y="12" width="280" height="24" rx="6" fill="#1f2937" />
+  <text x="112" y="28" fill="#9ca3af" fontSize="11" fontFamily="monospace">dreamcity.gov/dashboard/live-map</text>
+
+  {/* Left Sidebar */}
+  <rect x="0" y="48" width="180" height="432" fill="#0f172a" stroke="#1e293b" strokeWidth="1" />
+  <text x="24" y="86" fill="#f59e0b" fontSize="14" fontFamily="sans-serif" fontWeight="bold">DreamCity</text>
+  <text x="24" y="104" fill="#64748b" fontSize="10" fontFamily="sans-serif">Civic Analyzer v2.0</text>
+
+  <rect x="16" y="130" width="148" height="32" rx="8" fill="#1e293b" />
+  <text x="36" y="150" fill="#ffffff" fontSize="11" fontFamily="sans-serif" fontWeight="600">📊 Live Analytics</text>
+
+  <rect x="16" y="172" width="148" height="32" rx="8" fill="transparent" />
+  <text x="36" y="192" fill="#94a3b8" fontSize="11" fontFamily="sans-serif">🗺️ Map View</text>
+
+  <rect x="16" y="214" width="148" height="32" rx="8" fill="transparent" />
+  <text x="36" y="234" fill="#94a3b8" fontSize="11" fontFamily="sans-serif">📝 Issues Queue</text>
+
+  <rect x="16" y="256" width="148" height="32" rx="8" fill="transparent" />
+  <text x="36" y="276" fill="#94a3b8" fontSize="11" fontFamily="sans-serif">🏛️ Governance</text>
+
+  {/* Main Dashboard Canvas */}
+  {/* Stat Cards */}
+  <g transform="translate(204, 68)">
+    <rect width="180" height="80" rx="12" fill="#111827" stroke="#1f2937" strokeWidth="1" />
+    <text x="16" y="28" fill="#94a3b8" fontSize="10" fontFamily="sans-serif" fontWeight="500">TOTAL COMPLAINTS</text>
+    <text x="16" y="58" fill="#ffffff" fontSize="24" fontFamily="monospace" fontWeight="bold">1,482</text>
+    <text x="96" y="58" fill="#10b981" fontSize="11" fontFamily="sans-serif">+14% resolved</text>
+  </g>
+
+  <g transform="translate(396, 68)">
+    <rect width="180" height="80" rx="12" fill="#111827" stroke="#1f2937" strokeWidth="1" />
+    <text x="16" y="28" fill="#94a3b8" fontSize="10" fontFamily="sans-serif" fontWeight="500">AVG RESOLUTION</text>
+    <text x="16" y="58" fill="#f59e0b" fontSize="24" fontFamily="monospace" fontWeight="bold">18.4 hrs</text>
+    <text x="120" y="58" fill="#3b82f6" fontSize="11" fontFamily="sans-serif">Fast lane</text>
+  </g>
+
+  <g transform="translate(588, 68)">
+    <rect width="188" height="80" rx="12" fill="#111827" stroke="#1f2937" strokeWidth="1" />
+    <text x="16" y="28" fill="#94a3b8" fontSize="10" fontFamily="sans-serif" fontWeight="500">GEO PINNED SITES</text>
+    <text x="16" y="58" fill="#10b981" fontSize="24" fontFamily="monospace" fontWeight="bold">98.6%</text>
+    <text x="110" y="58" fill="#10b981" fontSize="11" fontFamily="sans-serif">Validated</text>
+  </g>
+
+  {/* Simulated Interactive Map & Complaint Feeds */}
+  <g transform="translate(204, 164)">
+    {/* Map Box */}
+    <rect width="360" height="290" rx="12" fill="#0f172a" stroke="#1e293b" strokeWidth="1" />
+    
+    {/* Map Grid and streets */}
+    <path d="M20 60 Q 120 40, 240 120 T 340 180" stroke="rgba(245, 158, 11, 0.4)" strokeWidth="4" fill="none" />
+    <path d="M60 270 Q 150 180, 260 210 T 320 260" stroke="rgba(59, 130, 246, 0.4)" strokeWidth="3" fill="none" />
+    <line x1="180" y1="20" x2="180" y2="270" stroke="rgba(255,255,255,0.06)" strokeWidth="2" strokeDasharray="4 4" />
+    <line x1="20" y1="150" x2="340" y2="150" stroke="rgba(255,255,255,0.06)" strokeWidth="2" strokeDasharray="4 4" />
+
+    {/* Map Pins */}
+    <circle cx="120" cy="80" r="12" fill="#ef4444" fillOpacity="0.2" />
+    <circle cx="120" cy="80" r="6" fill="#ef4444" />
+    
+    <circle cx="240" cy="120" r="14" fill="#f59e0b" fillOpacity="0.2" />
+    <circle cx="240" cy="120" r="7" fill="#f59e0b" />
+
+    <circle cx="280" cy="220" r="12" fill="#10b981" fillOpacity="0.2" />
+    <circle cx="280" cy="220" r="6" fill="#10b981" />
+
+    {/* Map overlay card */}
+    <rect x="20" y="210" width="160" height="60" rx="8" fill="rgba(15, 23, 42, 0.9)" stroke="#334155" strokeWidth="1" />
+    <text x="32" y="232" fill="#ffffff" fontSize="11" fontFamily="sans-serif" fontWeight="bold">Civic Pin #4029</text>
+    <text x="32" y="248" fill="#f59e0b" fontSize="10" fontFamily="sans-serif">Roadway Pothole • Verified</text>
+    <text x="32" y="260" fill="#94a3b8" fontSize="9" fontFamily="monospace">12.9716° N, 77.5946° E</text>
+  </g>
+
+  {/* Realtime Stream List */}
+  <g transform="translate(576, 164)">
+    <rect width="200" height="290" rx="12" fill="#111827" stroke="#1f2937" strokeWidth="1" />
+    <text x="16" y="28" fill="#f3f4f6" fontSize="12" fontFamily="sans-serif" fontWeight="bold">Recent Submissions</text>
+
+    {/* Item 1 */}
+    <rect x="12" y="44" width="176" height="68" rx="8" fill="#1e293b" />
+    <text x="24" y="66" fill="#f59e0b" fontSize="11" fontFamily="sans-serif" fontWeight="600">Streetlight Outage</text>
+    <text x="24" y="82" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Ward 14 • In Progress</text>
+    <text x="24" y="98" fill="#10b981" fontSize="9" fontFamily="monospace">STATUS: DISPATCHED</text>
+
+    {/* Item 2 */}
+    <rect x="12" y="122" width="176" height="68" rx="8" fill="#1e293b" />
+    <text x="24" y="144" fill="#f59e0b" fontSize="11" fontFamily="sans-serif" fontWeight="600">Water Pipeline Leak</text>
+    <text x="24" y="160" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Sector 7 • Under Review</text>
+    <text x="24" y="176" fill="#3b82f6" fontSize="9" fontFamily="monospace">STATUS: ANALYZED</text>
+
+    {/* Item 3 */}
+    <rect x="12" y="200" width="176" height="68" rx="8" fill="#1e293b" />
+    <text x="24" y="222" fill="#f59e0b" fontSize="11" fontFamily="sans-serif" fontWeight="600">Waste Management</text>
+    <text x="24" y="238" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Central Block • Verified</text>
+    <text x="24" y="254" fill="#10b981" fontSize="9" fontFamily="monospace">STATUS: RESOLVED</text>
+  </g>
+</svg>
