@@ -49,7 +49,7 @@ export const keyMetrics = [
     label: "Technical Skills & Tools",
   },
   {
-    value: "10",
+    value: "9",
     label: "Verified Certifications",
   },
   {
@@ -1022,20 +1022,6 @@ export const certifications = [
     badgeColor: "emerald",
     category: "AI & Healthcare",
     description: "Online specialization focused on AI-relevant tools, applications, and systems for healthcare.",
-  },
-  {
-    id: "plan-agile-github-azure",
-    title: "Plan Agile with GitHub Projects and Azure Boards",
-    issuer: "Microsoft",
-    completedDate: "August 27, 2026",
-    date: "August 2026",
-    recipient: "Ajay Hukkeri",
-    image: "/certifications/plan-agile-github-projects-azure-boards.png",
-    verificationUrl: null,
-    badge: "Agile Planning",
-    badgeColor: "blue",
-    category: "Agile & Azure",
-    description: "Plan Agile with GitHub Projects and Azure Boards.",
   },
   {
     id: "copado-ai",
