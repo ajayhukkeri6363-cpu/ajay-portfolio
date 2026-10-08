@@ -170,11 +170,15 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: index * 0.04 }}
                 className="cert-grid-card"
+                onClick={() => onSelectCertificate(cert)}
               >
                 {/* Thumbnail Preview Area */}
                 <div
                   className="cert-thumbnail-wrapper"
-                  onClick={() => onSelectCertificate(cert)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectCertificate(cert);
+                  }}
                   title={`View full certificate - ${cert.title}`}
                 >
                   <img
@@ -183,13 +187,12 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
                     className="cert-thumbnail-img"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
-                      if (e.currentTarget.nextElementSibling) {
-                        e.currentTarget.nextElementSibling.style.display = "flex";
-                      }
+                      const fallback = e.currentTarget.parentElement?.querySelector(".cert-thumbnail-fallback");
+                      if (fallback) fallback.style.display = "flex";
                     }}
                   />
                   <div className="cert-thumbnail-fallback" style={{ display: "none" }}>
-                    <Award size={32} className="text-amber-500" />
+                    <Award size={36} className="text-amber-500 mb-1" />
                     <span className="fallback-badge-text">{cert.issuer}</span>
                   </div>
 
@@ -223,8 +226,13 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
                   {/* Actions */}
                   <div className="cert-card-actions">
                     <button
-                      onClick={() => onSelectCertificate(cert)}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectCertificate(cert);
+                      }}
                       className="cert-view-btn"
+                      title={`View certificate - ${cert.title}`}
                     >
                       <Eye size={14} />
                       <span>View Certificate</span>
@@ -235,6 +243,7 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
                         href={cert.verificationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="cert-verify-link"
                         title="Verify online"
                       >
