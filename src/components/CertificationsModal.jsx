@@ -39,8 +39,8 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
   if (!isOpen) return null;
 
   const categories = [
-    { id: "all", label: "All Certifications (9)" },
-    { id: "ai", label: "AI & LLMs" },
+    { id: "all", label: `All Certifications (${certifications.length})` },
+    { id: "ai", label: "AI & ML" },
     { id: "cloud", label: "Cloud & SQL" },
     { id: "devops", label: "DevOps & Agile" },
   ];
@@ -49,6 +49,7 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
     const matchesSearch =
       cert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       cert.issuer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (cert.institution && cert.institution.toLowerCase().includes(searchQuery.toLowerCase())) ||
       (cert.category && cert.category.toLowerCase().includes(searchQuery.toLowerCase()));
 
     if (!matchesSearch) return false;
@@ -57,7 +58,9 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
     if (filterCategory === "ai")
       return (
         cert.id.includes("ai") ||
+        cert.id.includes("machine-learning") ||
         cert.title.toLowerCase().includes("ai") ||
+        cert.title.toLowerCase().includes("machine learning") ||
         cert.title.toLowerCase().includes("llm")
       );
     if (filterCategory === "cloud")
@@ -112,7 +115,7 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
               </div>
               <h2 className="certs-modal-title">All Certifications</h2>
               <p className="certs-modal-subtitle">
-                Complete verified portfolio of 9 industry certifications across Artificial Intelligence, Cloud Infrastructure, Agile Delivery, DevOps, and Data Fundamentals.
+                Complete verified portfolio of {certifications.length} industry certifications across Machine Learning, Artificial Intelligence, Cloud Infrastructure, Agile Delivery, DevOps, and Data Fundamentals.
               </p>
             </div>
 
@@ -265,7 +268,7 @@ export default function CertificationsModal({ isOpen, theme, onClose, onSelectCe
           <div className="certs-modal-footer">
             <div className="certs-footer-verified-note">
               <CheckCircle2 size={15} className="text-emerald-400" />
-              <span>All 9 certifications verified under Ajay Hukkeri</span>
+              <span>All {certifications.length} certifications verified under Ajay Hukkeri</span>
             </div>
             <button onClick={onClose} className="certs-footer-close-btn">
               Done Viewing

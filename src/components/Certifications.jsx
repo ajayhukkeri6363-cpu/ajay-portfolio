@@ -129,7 +129,7 @@ export default function Certifications({ theme }) {
               <div className="cta-badge-line">
                 <span className="cta-count-pill">{certifications.length} Industry Credentials</span>
                 <span className="cta-sep">•</span>
-                <span className="cta-sub">IBM • Microsoft • Coursera • Infosys • Copado</span>
+                <span className="cta-sub">NPTEL / IIT • IBM • Microsoft • Coursera • Infosys • Copado</span>
               </div>
               <h4 className="cta-banner-title">
                 Explore the complete verified credentials portfolio.

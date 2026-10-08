@@ -49,7 +49,7 @@ export const keyMetrics = [
     label: "Technical Skills & Tools",
   },
   {
-    value: "9",
+    value: "10",
     label: "Verified Certifications",
   },
   {
@@ -942,6 +942,28 @@ module.exports = router;`,
 ];
 
 export const certifications = [
+  {
+    id: "nptel-introduction-to-machine-learning",
+    title: "Introduction to Machine Learning",
+    issuer: "NPTEL",
+    institution: "IIT Kharagpur",
+    program: "NPTEL Online Certification (Funded by MoE, Govt. of India)",
+    courseDuration: "8 week course (JUL-SEP 2026)",
+    completedDate: "September 2026",
+    date: "JUL-SEP 2026",
+    score: "56%",
+    scoreDetails: "Consolidated Score: 56% (Assignments: 24.71/25, Proctored Exam: 30.75/75)",
+    certificationId: "NPTEL26CS119S154600097",
+    credits: "3 credits recommended",
+    recipient: "Ajay Hukkeri",
+    image: "/certifications/nptel-introduction-to-machine-learning.png",
+    verificationUrl: null,
+    badge: "NPTEL / IIT",
+    badgeColor: "amber",
+    category: "Machine Learning & AI",
+    description:
+      "NPTEL Online Certification for Introduction to Machine Learning, awarded by IIT Kharagpur with a consolidated score of 56% (Roll No: NPTEL26CS119S154600097).",
+  },
   {
     id: "working-with-google-cloud-sql",
     title: "Working with Google Cloud SQL",
